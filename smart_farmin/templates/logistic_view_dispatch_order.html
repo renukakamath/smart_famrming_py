@@ -1,0 +1,66 @@
+{% include 'logistic_header.html' %}
+
+ <div style="margin-bottom: 1em; background:url('/static/assets/img/organic23.jpg') ; height: 300px; width: 100%; background-size: contain;" >
+    </div>
+ 
+<center>
+<form method="post">
+	<h2>View Corier</h2>
+	
+	<table class="table table-striped" style="width: 1000px;">
+		<tr>
+			<th>#</th>
+			<th>Customer Name</th>
+			<th>House Name</th>
+			<th>Street</th>
+			<th>District</th>
+			<th>Pincode</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>Product</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			<th></th>
+		</tr>
+		{% for i in data['view'] %}
+		<tr>
+
+			<td>{{loop.index}}</td>
+			<td>{{i['first_name']}} {{i['last_name']}}</td>
+			<td>{{i['house_name']}}</td>
+			<td>{{i['place']}}</td>
+			<td>{{i['district']}}</td>
+			<td>{{i['pincode']}}</td>
+			<td>{{i['phone']}}</td>
+			<td>{{i['email']}}</td>
+			<td>{{i['product']}}</td>
+			<td>{{i['quantity']}}</td>
+			<td>{{i['total_amount']}}</td>
+
+			{% if i ['oder_status']=='dispatch'%}
+			<td><a onclick="return confirm('Are you Sure?')" href="?action=accept&omid={{ i['om_id'] }}" class="btn btn-primary">Pick Up</a></td>
+			{% elif i ['oder_status']=='pickup'%}
+
+			<td><a onclick="return confirm('Are you Sure?')" href="?action=delivery&omid={{ i['om_id'] }}" class="btn btn-primary">Delivery</a></td>
+
+			{% elif i ['oder_status']=='pending'%}
+			<td><span>processsing</span></td>
+			{% else %}
+			<td>{{i['oder_status']}}</td>
+
+			{% endif %}
+
+	
+			
+
+			
+
+		</tr>
+		{% endfor %}
+	</table>
+</form>
+</center>
+       
+ 
+
+{% include 'footer.html' %}

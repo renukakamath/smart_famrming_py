@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/whitecrop"
+    tools:context=".Cropsuggests">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:text="Predict based on Soil Content" />
+
+    <EditText
+        android:id="@+id/etmois"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:hint="Moisture" />
+    <EditText
+        android:id="@+id/etphv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="PH value" />
+    <EditText
+        android:id="@+id/etni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:hint="Nitrogen" />
+    <EditText
+        android:id="@+id/etph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:hint="Phosphorus" />
+    <EditText
+        android:id="@+id/etpot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:hint="Potassium" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:background="#454542"
+        android:layout_width="match_parent"
+        android:textColor="#fff"
+        android:layout_height="wrap_content"
+        android:text="Predict" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="" />
+</LinearLayout>

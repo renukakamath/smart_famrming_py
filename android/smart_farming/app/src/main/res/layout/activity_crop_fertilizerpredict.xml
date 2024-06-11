@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/whitecrop"
+    tools:context=".CropFertilizerpredict">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Predict Fertilizer  Using API" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout7"
+        android:layout_width="300dp"
+        android:hint="Place"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:layout_height="100dp">
+    <EditText
+        android:id="@+id/etplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:inputType="textPersonName"
+         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btpredict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Predict" />
+
+    <TextView
+    android:id="@+id/tvout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+    android:text="" />
+
+
+
+</LinearLayout>

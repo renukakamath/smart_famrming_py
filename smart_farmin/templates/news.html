@@ -1,0 +1,85 @@
+{%include 'admin_header.html'%}
+
+
+<!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <form method="POST">
+	<center><H3>News And Notification</H3></center>
+
+	{% if data['res'] %}
+		<table class="table" style="color: white;">
+  <tr>
+				<th>News Title</th>
+				<td><input type="text" name="title" value="{{data['res'][0]['title']}}" class="form-control"></td>
+				
+  </tr>
+
+
+  <tr>
+  		<th>Description</th>
+  		<td><input type="text" name="des" value="{{data['res'][0]['description']}}" class="form-control"></td>
+  </tr>
+
+
+<tr>
+			<td align="center" colspan="2"><input type="submit" name="edit" value="Update" class="btn btn-success"></td>
+</tr>
+</table>
+{% else %}
+
+
+<table class="table" style="color: white;">
+  <tr>
+				<th>News Title</th>
+				<td><input type="text" name="title" class="form-control"></td>
+				
+  </tr>
+
+
+  <tr>
+  	<th>Description</th>
+  	<td><input type="text" name="des" class="form-control"></td>
+  </tr>
+
+
+<tr>
+		<td align="center" colspan="2"><input type="submit" name="news" value="Submit" class="btn btn-success"></td>
+</tr>
+</table>
+ {% endif %}
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
+
+ <center>
+
+<h3> News And Notification</h3>
+<table class="table">
+	<tr>
+		<th>Sl No</th>
+		<th>News Title</th>
+		<th>Description</th>
+		<th>Date</th>
+	</tr>
+
+	{%for i  in data['news']%}
+	<tr>
+		<td>{{loop.index}}</td>
+		<td>{{ i['title']}}</td>
+		<td>{{ i['description']}}</td>
+		<td>{{ i['date']}}</td>
+		<td><a href="?action=delete&nid={{i['news_id']}}" class="btn btn-warning">Delete</a></td>
+		<td><a href="?action=update&nid={{i['news_id']}}" class="btn btn-info">Update</a></td>
+	</tr>	
+    {%endfor%}
+</table>
+</center>
+</form>	
+
+{% include 'footer.html' %}

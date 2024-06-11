@@ -1,0 +1,28 @@
+{% include 'admin_header.html' %}
+<div style=" background:url('/static/images/fly1.jpg') ; height: 300px; width: 100%; background-size: cover;"  >
+	</div>
+<center>
+	<form method="POST">
+		<table  class="table" style="width: 900px;">
+			<tr>
+				<th>Farmer Name</th>
+				<th>Product Name</th>
+				<th>Availability</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Image</th>
+			</tr>
+			{% for i in data['view'] %}
+			<tr>
+				<td>{{i['first_name']}}  {{i['last_name']}}</td>
+				<td>{{i['crop_name']}}</td>
+				<td>{{i['availability']}}</td>
+				<td>{{i['description']}}</td>
+				<td>{{i['amount']}}</td>
+				<td><a href="/{{i['image']}} "><img src="/{{i['image']}} " width="150px" height="150px"></a></td>
+			</tr>
+			{% endfor %}
+		</table>
+	</form>
+</center>
+{% include 'footer.html' %}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/cropgreen"
+    tools:context=".FarmerHome">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:text="Farmer Home" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/newsviewbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColor="#000"
+        android:text="View News" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tubtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="View Tutorials" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toolviewbtn"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="View Tools" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bookid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:text="View My Booking" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="Manage Crops" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewod"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:text="View Orders" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enq"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:text="ENQUIRY" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cropyield"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:text="Crop yield predict" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cropsuj"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:text="Crop Suggestion" />
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/fer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="#fff"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Fertiliser Suggestion" />-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lgc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:text="logout" />
+</LinearLayout>

@@ -1,0 +1,77 @@
+{%include 'officer_header.html'%}
+<div style="width:  100%;height: 200px;background-image: url('/static/assets/img/about.jpg'); background-size: cover;">
+	
+</div>
+
+<center>
+<h3> Tools and fertilizers Details</h3>
+<form method="POST" enctype="multipart/form-data" >
+	{% if data['res'] %}
+		<table class="table" style="width: 900px">
+  <tr>
+				<th>Product Name </th>
+				<td><input type="text" name="pname" value="{{data['res'][0]['product']}}">
+					
+				</td>
+				
+  </tr>
+  <tr>
+  			<th>Product Amount</th>
+  			<td><input type="text"  name="amt" value="{{data['res'][0]['amount']}}"></td>
+  </tr>
+  <tr>
+  			<th>Description</th>
+  			<td><input type="text" name="pdes" value="{{data['res'][0]['description']}}"></td>
+  </tr>
+   <tr>
+		<td align="center" colspan="2"><input type="submit" name="edit" value="Update" class="btn btn-primary"></td>
+</tr>
+</table>
+{% else %}
+
+
+		<table class="table" style="width: 900px">
+  <tr>
+				<th>Product Name </th>
+				<td><input type="text" name="pname">
+					
+				</td>
+				
+  </tr>
+  <tr>
+  			<th>Product Amount</th>
+  			<td><input type="text"  name="amt"></td>
+  </tr>
+  <tr>
+  			<th>Description</th>
+  			<td><input type="text" name="pdes"></td>
+  </tr>
+  <tr>
+				<td align="center" colspan="2"><input class="btn btn-primary" type="submit" name="products" value="Submit"></td>
+			</tr>
+</table>
+{% endif %}
+
+      </center>
+<center><h3> Products available</h3></center>
+<center>
+<table class="table" style="width: 900px">
+	<tr>
+		<th>Products</th>
+		<th>Amount</th>
+		<th>Description</th>
+	</tr>
+	{%for i  in data['products']%}
+	<tr>
+		<td>{{ i['product'] }}</td>
+		<td>{{ i['amount'] }}</td>
+		<td>{{ i['description'] }}</td>
+		<td><a href="?action=delete&pid={{i['product_id']}}" class="btn btn-danger">Delete</a></td>
+		<td><a href="?action=update&pid={{i['product_id']}}" class="btn btn-info">Update</a></td>
+	</tr>
+	{%endfor%}
+</table>
+</center>
+</form>
+
+{% include 'footer.html' %}

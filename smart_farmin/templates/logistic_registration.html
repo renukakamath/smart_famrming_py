@@ -1,0 +1,50 @@
+{% include 'public_header.html' %}
+
+
+<center>
+		<form method="post" style="height:80vh;overflow-y: scroll;">
+			<h2>Logistic Registration</h2>
+			<table class="table" style="width: 500px;">
+				<tr>
+					<th>Logistic Name</th>
+					<td><input type="text" id="sample" name="courier" value="{% if data['upd'] %}{{data['upd'][0]['courier_name']}}{% endif %}"   required class="form-control"></td>
+				</tr>
+
+				<tr>
+					<th>Place</th>
+					<td><input type="text" name="city" class="form-control" required></td>
+				</tr>
+				<tr>
+					<th>Phone Number</th>
+					<td><input type="text" name="phone" value="{% if data['upd'] %}{{data['upd'][0]['courier_phone']}}{% endif %}" pattern="[0-9]{10}" required title="number format"  class="form-control"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td><input type="email" name="email" value="{% if data['upd'] %}{{data['upd'][0]['staff_email']}}{% endif %}" required class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ></td>
+				</tr>
+
+				<tr>
+					<th>Username</th>
+					<td><input type="text" name="username"  class="form-control" required></td>
+				</tr>
+					
+
+				<tr>
+					<th>Password</th>
+					<!-- <td><input type="Password" name="password" value="" id="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 5 or more characters" required> 
+			</td -->
+
+			<td><input type="Password" name="password" value="" id="password" class="form-control"   required> 
+			</td>
+
+
+						</tr>
+						
+				<tr>
+					<td align="center" colspan="2"><input type="submit" {% if data['upd'] %}
+					name="update" value="Update" {% else %} name="submit" value="Register" {% endif %} class="btn btn-success" style="width: 150px;"></td>
+				</tr>
+			</table>
+		</form>
+		</center>
+{% include 'footer.html' %}

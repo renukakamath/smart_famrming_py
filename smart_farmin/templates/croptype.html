@@ -1,0 +1,67 @@
+{%include 'admin_header.html'%}
+
+
+
+<form method="POST" 
+style="margin-top: 100px;width: 600px">
+	<h3> Crop Type Details</h3>
+
+	{% if data['res'] %}
+		<table class="table">
+  <tr>
+				<th>Croptype </th>
+				<td><input type="text" name="ctype"  value="	">
+					
+				</td>
+				
+  </tr>
+  <tr>
+  			<th>Description</th>
+  			<td><input type="text"  name="cdes"  value="{{data['res'][0]['type_description']}}">
+  			</td>
+  </tr>
+  
+  <tr>
+	<td align="center" colspan="2"><input type="submit" name="edit" value="Update" class="btn btn-primary"></td>
+</tr>
+</table>
+
+{% else %}
+
+	<table class="table">
+  <tr>
+				<th>Croptype </th>
+				<td><input type="text" name="ctype">
+					
+				</td>
+				
+  </tr>
+  <tr>
+  			<th>Description</th>
+  			<td><input type="text"  name="cdes" ></td>
+  </tr>
+  <tr> <td><input type="submit" name="croptype" value="submit" class="btn btn-primary"></td> 
+  </tr>
+</table>
+</form>
+ {% endif %}
+
+
+<h3> Crops available</h3>
+<table class="table">
+	<tr>
+		<th>Sl No</th>
+		<th>Crop Type</th>
+		<th>Description</th>
+	</tr>
+	{%for i  in data['croptype']%}
+	<tr>
+		<td>{{loop.index}}</td>
+		<td>{{ i['type_name'] }}</td>
+		<td>{{ i['type_description'] }}</td>
+		<td><a href="?action=delete&tid={{i['type_id']}}" >Delete</a></td>
+		<td><a href="?action=update&tid={{i['type_id']}}">Update</a></td>
+		
+	</tr>
+	{%endfor%}
+</table>

@@ -1,0 +1,39 @@
+{%include 'admin_header.html'%}
+
+<div style=" background:url('/static/images/fly1.jpg') ; height: 300px; width: 100%; background-size: cover;"  >
+	</div>
+	
+<form method="POST">
+<center>
+<table class="table" style="width: 800px;">
+	<h3> Farmers Details</h3>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Place</th>
+		<th>Pincode</th>
+		<th>Gender</th>
+		<th>Date of Birth</th>
+		<th>Phone</th>
+		<th>Email</th>
+		<th>Location</th>
+	</tr>
+
+	{%for i  in data['farmers']%}
+	<tr>
+		<td>{{ i['first_name'] }}</td>
+		<td>{{ i['last_name'] }}</td>
+		<td>{{ i['place'] }}</td>
+		<td>{{ i['pincode'] }}</td>
+		<td>{{ i['gender'] }}</td>
+		<td>{{ i['dob'] }}</td>
+		<td>{{ i['phone'] }}</td>
+		<td>{{ i['email'] }}</td>
+		<td><a class="btn btn-primary" href="http://www.google.com/maps?q={{i['latitude'] }},{{i['longitude']}}"> Location </a></td>
+	</tr>
+	{%endfor%}
+</table>
+</center>
+</form>
+
+{% include 'footer.html' %}

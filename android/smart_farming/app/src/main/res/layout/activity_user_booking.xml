@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/whitecrop"
+    tools:context=".UserBooking">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textStyle="italic|bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="100dp"
+        android:text="Select Quantity" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="0dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/pname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Productname" />
+    <TextView
+        android:id="@+id/pdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="desc" />
+    <TextView
+        android:id="@+id/pam"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:text="desc" />
+    <TextView
+        android:id="@+id/pqty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="desc" />
+
+    <EditText
+        android:id="@+id/pquantity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:paddingLeft="20dp"
+        android:background="@drawable/square"
+        android:layout_marginTop="5dp"
+        android:hint="Your quantity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/green_button"
+        android:textColor="#fff"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="SUBMIT" />
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+{%include 'officer_header.html'%}
+
+
+ <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+
+
+
+<center>
+
+
+<h3 class="text-white"> Tutorials Details</h3>
+<form method="POST" enctype="multipart/form-data">
+	{% if data['res'] %}
+			<table class="table text-white" >
+  <tr>
+				<th>Title</th>
+				<td><input type="text" name="title" value="{{data['res'][0]['title']}}" class="form-control">
+					
+				</td>
+				
+  </tr>
+   <tr>
+				<th>Description</th>
+				<td><input type="text" name="des" value="{{data['res'][0]['description']}}" class="form-control">
+					
+				</td>
+				
+  </tr>
+  <tr>
+				<th>File Path</th>
+				<td><input type="file" name="path" value="{{data['res'][0]['file_path']}}" class="form-control">
+					
+				</td>
+				
+  </tr>
+
+ <tr>
+				<th>File Type</th>
+				<td><input type="text" name="ftype" value="{{data['res'][0]['file_type']}}" class="form-control">
+					
+				</td>
+				
+  </tr>
+  <tr>
+		<td align="center" colspan="2"><input class="btn btn-primary" type="submit" name="edit" value="Update"></td>
+</tr>
+</table>
+
+{% else %}
+
+
+		<table class="table text-white">
+  <tr>
+				<th>Title</th>
+				<td><input type="text" name="title" class="form-control">
+					
+				</td>
+				
+  </tr>
+   <tr>
+				<th>Description</th>
+				<td><input type="text" name="des" class="form-control">
+					
+				</td>
+				
+  </tr>
+  <tr>
+				<th>File Path</th>
+				<td><input type="file" name="path" class="form-control">
+					
+				</td>
+				
+  </tr>
+
+ <tr>
+				<th>File Type</th>
+				<td><input type="text" name="ftype" class="form-control">
+					
+				</td>
+				
+  </tr>
+   <tr>
+				<td align="center" colspan="2"><input class="btn btn-primary" type="submit" name="tutorials" value="Submit"></td>
+			</tr>
+</table>
+ {% endif %}
+
+   <!--  <h2>We are team of talented digital marketers</h2> -->
+        </div>
+ 
+
+    </div>
+  </section><!-- End Hero -->
+
+<h3>Tutorials</h3>
+<table class="table"> 
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+		<th>File Path</th>
+		<th>File type</th>
+	</tr>
+	{%for i  in data['tutorials']%}
+	<tr>
+		<td>{{ i['officer_id'] }}</td>
+		<td>{{ i['title'] }}</td>
+		<td>{{ i['description'] }}</td>
+		<td><a href="/{{ i['file_path'] }}"><img src="/{{ i['file_path'] }}" width="100" height="100"></a></td>
+		<td>{{ i['file_type'] }}</td>
+		<td><a href="?action=delete&tid={{i['tutorial_id']}}" class="btn btn-info">Delete</a></td>
+		<td><a href="?action=update&tid={{i['tutorial_id']}}" class="btn btn-danger">Update</a></td>
+	</tr>
+	{%endfor%}
+</table>
+</center>
+</form>
+{% include 'footer.html' %}

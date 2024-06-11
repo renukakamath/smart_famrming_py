@@ -1,0 +1,55 @@
+{%include 'officer_header.html'%}
+
+<div style="width:  100%;height: 200px;background-image: url('/static/assets/img/about.jpg'); background-size: cover;">
+	
+</div>
+<center>
+<form method="post">
+
+		{% if data['des'] %}
+		<center>
+			<h2>send reply</h2>
+		<table class="table">
+			<tr>
+				<th>Enquiry</th>
+				<td><input type="text" name="des" disabled="" value="{{data['des']}}"></td>
+			</tr>
+			<tr>
+				<th>reply</th>
+				<td><input type="text" name="txt"></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2"><input class="btn btn-primary" type="submit" name="reply"></td>
+			</tr>
+		</table>
+		</center>
+{% else %}
+
+
+
+<h3> Enquiry</h3>
+<table class="table">
+	<tr>
+		<th>Farmer Name</th>
+		<th>Description</th>
+		<th>Reply</th>
+		<th>Date</th>
+	</tr>
+	{%for i  in data['enquiry']%}
+	<tr>
+		<td>{{ i['first_name'] }} {{ i['last_name'] }}</td>
+		<td>{{ i['description'] }}</td>
+		<td>{{ i['reply'] }}</td>
+		<td>{{ i['date'] }}</td>
+		{% if i['reply']=='pending' %}
+		<td><a href="?id={{i['enquiry_id']}}&des={{i['description']}}" class="btn btn-primary">send replay</a></td>
+		{% endif %}
+		
+	</tr>
+	{%endfor%}
+</table>
+{% endif %}
+</form>
+</center>
+
+{% include 'footer.html' %}

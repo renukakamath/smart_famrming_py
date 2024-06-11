@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/crop"
+    android:gravity="center"
+    tools:context=".FarmerReg">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registration Form"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:textSize="5mm"
+
+        />
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:gravity="center"
+
+        android:hint="First Name" />
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+
+        android:inputType="textPersonName"
+        android:hint="Last Name" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/latitude"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#000"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColorHint="#000"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="center"-->
+
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="latitude" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/longitude"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="#000"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColorHint="#000"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="longitude" />-->
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:gravity="center"
+
+        android:inputType="phone"
+        android:hint="Phone number"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+
+        android:inputType="textEmailAddress"
+        android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/hname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:hint="House Name" />
+
+    <EditText
+        android:id="@+id/place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:hint="Place" />
+
+
+    <EditText
+        android:id="@+id/pincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:inputType="number"
+        android:hint="pincode"/>
+
+    <EditText
+        android:id="@+id/district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:hint="District" />
+    <EditText
+        android:id="@+id/uname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="username" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:hint="password"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ubtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:background="#fff"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:text="submit" />
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

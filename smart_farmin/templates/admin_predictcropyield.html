@@ -1,0 +1,92 @@
+{%include 'admin_header.html'%}
+
+ <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Predict Crop yields<span>.</span></h1>
+		  <form  method="post">
+          <table style="color: white;" class="table">
+          	
+          	<tr>
+          		<th>State</th>
+          		<td>
+          			<select name="sid">
+          				{% for row in data['state'] %}
+          				<option value="{{ row['state_id'] }}">{{ row['state'] }}</option>
+          				{% endfor %}
+          				
+          			</select>
+          		</td>
+          	</tr>
+            <tr>
+          		<th>Crops</th>
+          		<td>
+          			<select name="cid">
+          				{% for row in data['crops'] %}
+          				<option value="{{ row['crop_id'] }}">{{ row['crop_name'] }}</option>
+          				{% endfor %}
+          				
+          			</select>
+          		</td>
+          	</tr>
+
+            <tr>
+          		<th>Place</th>
+          		<td>
+          			<select name="pid">
+          				{% for row in data['place'] %}
+          				<option value="{{ row['place_id'] }}">{{ row['place'] }}</option>
+          				{% endfor %}
+          				
+          			</select>
+          		</td>
+          	</tr>
+
+			  <tr>
+				<th>Type</th>
+				<td>
+					<select name="yy">
+					
+						<option value="kharif">kharif</option>
+						<option value="Whole year">Whole year</option>
+						<option value="Autumn">Autumn</option>
+						<option value="Rabi">Rabi</option>
+						<option value="Summer">Summer</option>
+						<option value="Winter">Winter</option>
+						
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>Acre</th>
+				<td><input type="number" name="acre" id=""></td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<td><input type="submit" class="btn btn-primary" name="btn" id=""></td>
+			</tr>
+			<br>
+			<br>
+
+			<tr>
+				<th>Result</th>
+				<td >
+					<input type="text" value="{{data['result']}}" name="" id="">
+				</td>
+			</tr>
+          </table>
+		</form>
+         <!--  <h2>We are team of talented digital marketers</h2> -->
+        </div>
+ 
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+  	{% include 'footer.html' %}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/whitecrop"
+    tools:context=".User_Complaint">
+
+    <TextView
+        android:id="@+id/cid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="22dp"
+        android:textColor="#2B2727"
+        android:text="User Complaint Section"
+         />
+    <EditText
+        android:id="@+id/complaint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:textColor="#2B2727"
+        android:textStyle="bold"
+        android:textColorHint="#2B2727"
+        android:background="@drawable/square"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Complaints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cbtn"
+        android:layout_width="wrap_content"
+        android:background="@drawable/green_button"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Send" />
+
+    <ListView
+        android:id="@+id/view"
+        android:background="@drawable/whitecrop"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
